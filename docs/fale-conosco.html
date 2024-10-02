@@ -83,6 +83,13 @@
         formulario.addEventListener('submit', function(event) {
             event.preventDefault(); // Evita o envio padrão do formulário
 
+            const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
+
+            if (!recaptchaResponse) {
+                alert('Por favor, confirme que você não é um robô.');
+                return;
+            }
+
             const formData = new FormData(formulario);
 
             // Envio dos dados usando fetch (Ajustar com seu servidor)
