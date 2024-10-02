@@ -7,13 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- Carregar a API do reCAPTCHA com sua chave -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfDq1UqAAAAAMq8_CJ1LWL7ZjmTGIWh0rrh2o0t"></script>
+    
     <title>Document</title>
 </head>
 <body>
     <!--header inicia-->
     <header>
-        <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
         <a href="index.html">
             <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
         </a>        
@@ -44,12 +47,14 @@
                 <input type="text" name="name" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu email" required>
                 <textarea name="message" placeholder="Qual sua dúvida?" required></textarea>
-                <button type="submit">Enviar</button>
-
-                <!-- Recaptcha será exibido ao clicar em "Enviar" -->
-                <div id="recaptcha-container" style="display: none;">
-                    <div class="g-recaptcha" data-sitekey="SUA_SITE_KEY" data-callback="recaptchaCallback"></div>
-                </div>
+                
+                <!-- Botão de envio com reCAPTCHA -->
+                <button class="g-recaptcha"
+                        data-sitekey="6LfDq1UqAAAAAMq8_CJ1LWL7ZjmTGIWh0rrh2o0t"
+                        data-callback='onSubmit'
+                        data-action='submit'>
+                    Enviar
+                </button>
             </form>
     
             <div class="contato-info">
@@ -76,38 +81,35 @@
         const formulario = document.getElementById('contactForm');
         const modal = document.getElementById('customModal');
         const closeModal = document.getElementById('closeModal');
-        const recaptchaContainer = document.getElementById('recaptcha-container');
-        let isRecaptchaSolved = false;
 
-        // Função de callback do reCAPTCHA (é chamada quando o reCAPTCHA é resolvido)
-        function recaptchaCallback() {
-            isRecaptchaSolved = true;
-            // Simula o envio do formulário e exibe a mensagem de sucesso
-            setTimeout(function() {
-                modal.style.display = 'block'; // Exibe o modal de agradecimento
-                recaptchaContainer.style.display = 'none'; // Esconde o reCAPTCHA
-                formulario.reset(); // Limpa o formulário
-            }, 500);
+        // Função de retorno de chamada para lidar com o token de resposta
+        function onSubmit(token) {
+            // Adiciona o token de resposta ao FormData
+            const formData = new FormData(formulario);
+            formData.append('g-recaptcha-response', token);
+
+            // Envio dos dados usando fetch
+            fetch('YOUR_SERVER_ENDPOINT', { // Substitua pelo seu endpoint
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    modal.style.display = 'block'; // Exibe o modal de agradecimento
+                    formulario.reset(); // Limpa o formulário
+                } else {
+                    alert('Erro ao enviar a mensagem.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao enviar a mensagem.');
+            });
         }
-
-        // Ao clicar em "Enviar", o reCAPTCHA aparece
-        formulario.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio tradicional do formulário
-            
-            if (!isRecaptchaSolved) {
-                // Mostra o reCAPTCHA se não tiver sido resolvido
-                recaptchaContainer.style.display = 'block';
-            } else {
-                // Se já foi resolvido, processa o envio
-                modal.style.display = 'block';
-                formulario.reset();
-            }
-        });
 
         // Fechar o modal e limpar o formulário quando o botão "Fechar" for clicado
         closeModal.addEventListener('click', function() {
             modal.style.display = 'none'; // Esconde o modal
-            formulario.reset(); // Limpa o formulário
         });
     </script>
 
