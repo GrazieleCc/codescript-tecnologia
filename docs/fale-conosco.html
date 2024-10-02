@@ -85,7 +85,7 @@
 
             const formData = new FormData(formulario);
 
-            // Envio dos dados usando fetch
+            // Envio dos dados usando fetch (Ajustar com seu servidor)
             fetch('YOUR_SERVER_ENDPOINT', { // Substitua pelo seu endpoint
                 method: 'POST',
                 body: formData
@@ -95,12 +95,12 @@
                     modal.style.display = 'block'; // Exibe o modal de agradecimento
                     formulario.reset(); // Limpa o formulário
                 } else {
-                    alert('Mensagem enviada.');
+                    modal.style.display = 'block'; // Exibe o modal mesmo com falha no envio
                 }
             })
             .catch(error => {
                 console.error('Erro:', error);
-                alert('Mensagem enviada com sucesso.');
+                modal.style.display = 'block'; // Exibe o modal mesmo com erro
             });
         });
 
