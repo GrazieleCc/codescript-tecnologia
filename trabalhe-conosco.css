@@ -1,0 +1,317 @@
+*{
+    font-family: 'Inter', sans-serif; /* Aplica a fonte Inter ao corpo do documento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem; /*faz a ação de rolar ate onde cliquei no meu fixo*/
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.titulo{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.titulo span{
+    font-size: 5rem;
+    color: #0d1837;
+    border-radius:  .5rem;
+    padding: .2rem 1rem;
+
+}
+
+.titulo .servicos-azul{
+    color: #0285f4;
+}
+
+
+
+header{ /*explorar aq dps*/
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #0d1837;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+}
+
+
+header .navbar a{
+    color: #ededed;
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+
+#menu-bar{
+    color: #ededed;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+/* Estilos existentes... */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    visibility: hidden; /* Esconde o menu inicialmente */
+    opacity: 0; /* Invisível inicialmente */
+    position: absolute;
+    background-color: #0d1837;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    display: flex; /* Mantém o alinhamento */
+    flex-direction: column; /* Mantém os itens alinhados verticalmente */
+    transition: visibility 0.3s, opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+.dropdown-content a {
+    color: #ededed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.6rem;
+    white-space: nowrap; /* Evita quebra de linha nos itens do dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #14213d;
+}
+
+/* Quando o menu estiver visível, as propriedades são alteradas */
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ajustes para garantir que os itens não sejam deslocados */
+.navbar a, .dropdown {
+    display: inline-block;
+    vertical-align: middle; /* Mantém alinhamento vertical */
+}
+
+.dropdown-content {
+    flex-direction: column; /* Garante que os itens fiquem em coluna */
+}
+
+
+
+.trabalhe-conosco-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 9%;
+}
+
+body {
+    padding-top: 8rem;
+    background: #ededed;
+    margin: 0;
+}
+.trabalhe-conosco-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+
+}
+
+.formulario-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario-container h1 {
+    font-size: 3rem;
+    color: #0d1837;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.formulario-container p {
+    font-size: 2rem;
+    color: #0d1837;
+    text-align: center;    
+}
+
+.formulario-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+}
+
+.formulario-container input[type="text"],
+.formulario-container input[type="email"],
+.file-input-wrapper {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0d1837;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.file-input-wrapper label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background-color: #0285f4;
+    color: #ededed;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.8rem;
+
+}
+
+.file-input-wrapper input {
+    display: none;
+}
+
+.formulario-container button[type="submit"] {
+    background-color: #0285f4;
+    color: #ededed;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.formulario-container button[type="submit"]:hover {
+    background-color: #0285f4;
+}
+
+.info-container {
+    width: 45%;
+    text-align: center;
+}
+
+.info-container h2 {
+    font-size: 3rem;
+    color: #0d1837;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.info-container p {
+    font-size: 2rem;
+    color: #0d1837;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.info-container img {
+    max-width: 30rem;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.info-container ul {
+    list-style-type:circle;
+    padding-left: 10px;
+
+}
+
+.info-container ul li {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .trabalhe-conosco-wrapper {
+        flex-direction: column;
+    }
+
+    .formulario-container,
+    .info-container {
+        width: 100%;
+    }
+}
+
+/* Adicionado para o Modal */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #ededed;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

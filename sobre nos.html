@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeScript Technology</title>
+    <link rel="stylesheet" href="sobre nos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!--header inicia-->
+        <header>
+            <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+            <a href="index.html">
+                <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+            </a>        
+            <nav class="navbar">
+                <a href="index2.html">Inicio</a>
+                <div class="dropdown">
+                    <a href="#Atuação" class="dropbtn">Atuação</a>
+                    <div class="dropdown-content">
+                        <a href="agronegocio.html">Agronegócio</a>
+                        <a href="iot.html">IoT</a>
+                        <a href="saude.html">Saúde</a>
+                        <a href="rastreio.html">Rastreamento de Frota</a>
+                    </div>
+                </div>
+                <a href="index2.html#slider">Projetos</a>
+                <a href="sobre nos.html">Sobre Nós</a>
+                <a href="trabalhe-conosco.html">Carreira</a>
+                <a href="fale-conosco.html">Contato</a>
+            </nav>
+        </header>
+    <section>
+        <!-- Primeira Div -->
+        <div class="div-1">
+            <div class="text-content">
+                <h1><span class="span-azul">INOVAÇÃO</span> EM TECNOLOGIA DESDE 2014</h1>
+                <p>A CodeScript é uma empresa brasileira que transforma ideias em realidade com tecnologia. Desde 2014, desenvolvemos soluções inovadoras para agronegócio, gestão de frotas e IoT.</p>
+                <p>Nossa empresa também oferece o serviço de Outsourcing, permitindo que sua empresa terceirize diversas tarefas relacionadas à tecnologia, incluindo o desenvolvimento de software específico, suporte a programas existentes, gestão de equipes e mais.</p>
+            </div>
+            <img src="imagens/equipe1.png" alt="CodeScript Technology">
+        </div>
+
+        <!-- Segunda Div (Cards com valores) -->
+        <div class="div-2">
+            <div class="card">
+                <img src="imagens/dev-sfundo.png" alt="Ícone Missão">
+                <h3>Nossa Missão</h3>
+                <p>Melhorar processos e sistemas, impulsionando o crescimento dos nossos clientes e colaboradores.</p>
+            </div>
+            <div class="card">
+                <img src="imagens/equipe3.png" alt="Ícone Visão">
+                <h3>Nossa Visão</h3>
+                <p>Ser uma referência em tecnologia, inspirando clientes e colaboradores a crescerem juntos até 2025.</p>
+            </div>
+            <div class="card">
+                <img src="imagens/html e css.png"Ícone Valores">
+                <h3>Nossos Valores</h3>
+                <p>Acreditamos em honestidade, respeito, humildade e responsabilidade.</p>
+            </div>
+        </div>
+
+        <!-- Terceira Div -->
+        <div class="div-3">
+            <img src="imagens/equipe2 (1).png" alt="Discussão Tecnológica">
+            <div class="text-content">
+                <h1>FAZEMOS A <span class="span-azul">DIFERENÇA</span> NO SEU NEGÓCIO</h1>
+                <p>Inove seu negócio com as soluções tecnológicas da CodeScript, que oferece uma ampla gama de serviços, incluindo desenvolvimento de aplicações, gestão de sistemas, gestão de equipes e segurança de dados. Ao reforçar seu time com nossos desenvolvedores especializados, você poderá levar seus projetos a um novo nível de excelência.</p>
+                <p>Vamos juntos transformar o futuro da sua empresa? Fale conosco e vamos ajudá-lo a encontrar uma solução personalizada para sua empresa.</p>
+            </div>
+        </div>
+
+        <!-- Botão de Fale Conosco -->
+        <div style="text-align: center;">
+            <button onclick="faleConosco()">Fale Conosco</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 CodeScript Technology. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function faleConosco() {
+            window.location.href = "mailto:contato@codescript.com";
+        }
+    </script>
+
+</body>
+
+</html>

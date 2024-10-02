@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rastreio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Agronegócio - CodeScript</title>
+</head>
+<body>
+    <!-- Incluindo o cabeçalho -->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="index2.html#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <section class="container">
+        <div class="image-content-superior">
+            <img src="imagens/gps.png">
+        </div>
+        <div class="text-content">
+            <h1>TRAÇANDO A <span class="highlight">ROTA</span> <br>PARA O SEU NEGÓCIO</h1>
+            <p>Empresas precisam, de diversas formas, atravessar bairros, cidades e rodovias no decorrer de suas atividades. Estes deslocamentos tomam tempo, custam dinheiro e inclusive podem envolver riscos para o negócio e seus colaboradores.</p>
+            <p>Conhecer o melhor caminho a seguir e gerenciar veículos em trajeto não é apenas uma conveniência, é uma necessidade.</p>
+            <p>Algumas de nossas experiências incluem desenvolvimentos de softwares na qual criamos soluções para monitoramento veicular, gestão de frotas, gerenciamento de risco, roteirização e jornada de trabalho.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-content">
+            <h2>SOLUÇÕES</h2>
+            <ul>
+                <li>
+                    <img src="imagens/hardware.png" class="icone-hardware">
+                        <div>
+                            <strong>Monitoramento e Gestão de frota</strong> - Comunique-se via sistema com os equipamentos e tecnologias de seus veículos. Não apenas para monitorar sua localização atual, mas realizar um trabalho completo de supervisão de sua frota, fazendo tomada de decisão com base nos dados reais de cada veículo.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/dispositivo-movel.png" class="icone-mobile">
+                        <div>
+                            <strong>Roteirização</strong> - Combinar dados cartográficos atualizados com as regras do seu negócio para encontrar o melhor trajeto a ser seguido. O cálculo para gerar as rotas objetiva resultados que entregam o caminho mais econômico e viável, de acordo com os pontos que precisam ser visitados.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/sistema-gestao.png" class="icone-gestao">
+                        <div>
+                            <strong>Jornada de trabalho</strong> - Gerenciar criteriosamente a jornada de trabalho do condutor através da intermediação por um sistema automatizado que segue as regras da empresa e possui conformidade com a legislação, aumentando a segurança jurídica das empresas.
+                        </div>
+                </li>
+            </ul>
+            <a href="fale-conosco.html" style="text-decoration: none;">
+                <button>Fale conosco</button>
+            </a>            
+        </div>
+        <div class="image-content-inferior">
+            <img src="imagens/caminhao.png">
+        </div>
+    </section>
+<script>
+
+    // inicia aq o JS do sub menu em atuação//
+    // Função para abrir e fechar o dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Alterna a visibilidade do submenu ao clicar
+        dropbtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita comportamento de link
+            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
+        });
+
+        // Fecha o submenu ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+            }
+        });
+    });
+// fim JS do sub menu em atuação//
+
+
+</script>
+</body>
+</html>

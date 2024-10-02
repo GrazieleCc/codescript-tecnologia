@@ -1,0 +1,297 @@
+*{
+    font-family: 'Inter', sans-serif; /* Aplica a fonte Inter ao corpo do documento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem; /*faz a ação de rolar ate onde cliquei no meu fixo*/
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.titulo{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.titulo span{
+    font-size: 5rem;
+    color: #0d1837;
+    border-radius:  .5rem;
+    padding: .2rem 1rem;
+
+}
+
+.titulo .servicos-azul{
+    color: #0285f4;
+}
+
+
+
+header{ /*explorar aq dps*/
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #0d1837;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+}
+
+
+header .navbar a{
+    color: #ededed;
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+
+#menu-bar{
+    color: #ededed;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+header .navbar a:hover{
+    color: #0285f4;
+}
+
+
+/* Estilos existentes... */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    visibility: hidden; /* Esconde o menu inicialmente */
+    opacity: 0; /* Invisível inicialmente */
+    position: absolute;
+    background-color: #0d1837;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    display: flex; /* Mantém o alinhamento */
+    flex-direction: column; /* Mantém os itens alinhados verticalmente */
+    transition: visibility 0.3s, opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+.dropdown-content a {
+    color: #ededed;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.6rem;
+    white-space: nowrap; /* Evita quebra de linha nos itens do dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #14213d;
+}
+
+/* Quando o menu estiver visível, as propriedades são alteradas */
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ajustes para garantir que os itens não sejam deslocados */
+.navbar a, .dropdown {
+    display: inline-block;
+    vertical-align: middle; /* Mantém alinhamento vertical */
+}
+
+.dropdown-content {
+    flex-direction: column; /* Garante que os itens fiquem em coluna */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #ededed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ededed;
+    gap: 20px;
+}
+
+.text-content {
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .text-content {
+        text-align: left;
+    }
+}
+
+.text-content, .solutions {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-content-superior, .image-content-inferior {
+    flex: 1;
+    text-align: center;
+
+}
+
+
+/* Aqui você pode aplicar estilos específicos para cada imagem */
+.image-content-superior img {
+    margin-right: -50px;
+    padding-top: 100px;
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto; /* Mantenha a proporção da imagem */
+    border-radius: 10px;
+}
+
+.image-content-inferior img {
+    margin-left: -50px;
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto; /* Mantenha a proporção da imagem */
+    border-radius: 10px;
+}
+
+h1 {
+    margin-top: 70px;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    margin-top: -35px;
+    margin-left: 180px;
+    font-size: 3rem;
+    color: #333;
+}
+
+.highlight {
+    color: #0285f4;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+ul li {
+    margin-bottom: 15px;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+}
+
+ul li div {
+    display: flex;
+    flex-direction: column;
+}
+
+strong{
+    color: #0285f4;
+}
+
+/* Classes para ajustar manualmente o tamanho de cada ícone */
+.icone-hardware {
+    margin-left: -10px;
+    width: 25px; /* Ajuste o tamanho do ícone de hardware */
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    margin-top: 5px;
+
+}
+
+.icone-mobile {
+    width: 15px; /* Ajuste o tamanho do ícone de aplicações móveis */
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    margin-left: -5px;
+    margin-top: 5px;
+
+}
+
+.icone-gestao {
+    width: 20px; /* Ajuste o tamanho do ícone de sistemas de gestão */
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    margin-top: 5px;
+    margin-left: -5px;
+
+}
+
+
+button {
+    padding: 15px 30px;
+    background-color: #0285f4;
+    color: #ededed;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 180px;
+    font-size: 20px;
+
+}
+
+button:hover {
+    background-color:#0285f4;
+}

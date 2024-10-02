@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agronegocio.css].css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Agronegócio - CodeScript</title>
+</head>
+<body>
+    <!-- Incluindo o cabeçalho -->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="index2.html#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <section class="container">
+        <div class="image-content-superior">
+            <img src="imagens/produtor2.png" alt="Agronegócio 1">
+        </div>
+        <div class="text-content">
+            <h1>AGREGANDO VALOR AO <span class="highlight"><br>AGRONEGÓCIO</span></h1>
+            <p>Na CodeScript, estamos comprometidos em levar inovação e tecnologia para o campo. Desenvolvemos aplicativos personalizados que otimizam processos e oferecem praticidade ao produtor rural.</p>
+            <p>Se você busca melhorar a eficiência da sua operação agrícola e simplificar o seu dia a dia, fale conosco.</p>
+            <p>Juntos, podemos criar soluções que transformam desafios em oportunidades, maximizando seus resultados e facilitando a gestão da sua propriedade.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-content">
+            <h2>SOLUÇÕES</h2>
+            <ul>
+                <li>
+                    <img src="imagens/hardware.png" class="icone-hardware">
+                        <div>
+                        <strong>Integrações de hardware</strong> - Desenvolvimento e coleta de dados em dispositivos instalados nos equipamentos utilizados pelas empresas na rotina do campo.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/dispositivo-movel.png" class="icone-mobile">
+                        <div>
+                        <strong>Aplicações móveis</strong> - Visualização de dados e envio de comandos para um determinado dispositivo através de um aplicativo móvel, executando ações que facilitam o processo da empresa e do produtor rural.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/sistema-gestao.png" class="icone-gestao">
+                        <div>
+                        <strong>Sistemas de gestão</strong> - Desenvolvimento de sistemas para gestão através de dados que são fornecidos pelos dispositivos utilizados no processo, assim como a emissão de relatórios dessas informações.
+                        </div>
+                </li>
+            </ul>
+            <a href="fale-conosco.html" style="text-decoration: none;">
+                <button>Fale conosco</button>
+            </a>            
+        </div>
+        <div class="image-content-inferior">
+            <img src="imagens/produtor1.png" alt="Agronegócio 2">
+        </div>
+    </section>
+<script>
+
+// inicia aq o JS do sub menu em atuação//
+    // Função para abrir e fechar o dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Alterna a visibilidade do submenu ao clicar
+        dropbtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita comportamento de link
+            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
+        });
+
+        // Fecha o submenu ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+            }
+        });
+    });
+// fim JS do sub menu em atuação//
+
+</script>
+</body>
+</html>

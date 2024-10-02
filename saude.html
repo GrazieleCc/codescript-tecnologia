@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agronegocio.css].css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Agronegócio - CodeScript</title>
+</head>
+<body>
+    <!-- Incluindo o cabeçalho -->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="index2.html#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <section class="container">
+        <div class="image-content-superior">
+            <img src="imagens/medica.png">
+        </div>
+        <div class="text-content">
+            <h1>POTENCIALIZANDO A MEDICINA COM <span class="highlight"><br>A TECNOLOGIA</span></h1>
+            <p>A Medicina moderna fez avanços significativos no último século, aprimorando nossa compreensão do corpo e da mente humana, além de melhorar a prevenção e o tratamento de doenças, e a resposta a crises de saúde.</p>
+            <p>A Tecnologia na medicina tem o objetivo de otimizar processos e impulsionar pesquisas para novos tratamentos.</p>
+            <p>Inovações como aplicativos e dispositivos de Internet das Coisas têm proporcionado maior precisão e diversidade de dados, beneficiando tanto médicos quanto pacientes.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-content">
+            <h2>SOLUÇÕES</h2>
+            <ul>
+                <li>
+                    <img src="imagens/hardware.png" class="icone-hardware">
+                        <div>
+                        <strong>Monitoramento e Coleta de Dados</strong> - Criação de dispositivos wearables e sensores em equipamentos médicos que capturam dados em tempo real, aprimorando diagnósticos e acompanhamento médico.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/dispositivo-movel.png" class="icone-mobile">
+                        <div>
+                        <strong>Aplicações móveis</strong> - Desenvolvimento de apps que permitem aos profissionais de saúde acessar dados de pacientes e controlar dispositivos médicos, facilitando o gerenciamento remoto de tratamentos.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/sistema-gestao.png" class="icone-gestao">
+                        <div>
+                        <strong>Sistemas de gestão</strong> - Implementação de sistemas que organizam e analisam dados de dispositivos médicos, gerando relatórios detalhados para auxiliar na tomada de decisões clínicas e no planejamento de cuidados personalizados.
+                        </div>
+                </li>
+            </ul>
+            <a href="fale-conosco.html" style="text-decoration: none;">
+                <button>Fale conosco</button>
+            </a>
+        </div>
+        <div class="image-content-inferior">
+            <img src="imagens/exame.png">
+        </div>
+    </section>
+<script>
+
+    // inicia aq o JS do sub menu em atuação//
+    // Função para abrir e fechar o dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Alterna a visibilidade do submenu ao clicar
+        dropbtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita comportamento de link
+            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
+        });
+
+        // Fecha o submenu ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+            }
+        });
+    });
+// fim JS do sub menu em atuação//
+
+
+</script>
+</body>
+</html>

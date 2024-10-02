@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexcss2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--header inicia-->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>        
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+
+    <!--home inicia-->
+    <section class="home" id="home">
+        <div class="conteiner">
+        </div>
+
+        <div class="controles">
+        <span class="video-btn active" data-src="video-agro.mp4"></span>
+        <span class="video-btn" data-src="video-rastreio.mp4"></span>
+        <span class="video-btn" data-src="video-tecnologia.mp4"></span>
+        </div>
+        <div class="video-conteiner">
+            <video src="video-agro.mp4" id="video-slider" loop autoplay muted></video>
+            <a href="agronegocio.html" class="btn">Saiba mais</a>
+        </div>
+    
+        <div class="video-conteiner" style="display: none;">
+            <video src="video-rastreio.mp4" loop autoplay muted></video>
+            <a href="rastreio.html" class="btn">Saiba mais</a>
+        </div>
+    
+        <div class="video-conteiner" style="display: none;">
+            <video src="video-tecnologia.mp4" loop autoplay muted></video>
+            <a href="iot.html" class="btn">Saiba mais</a>
+        </div>
+
+    </section>
+    <!--home chega ao fim-->
+
+
+    <!--inicio section pag 2 serviços-->
+    <section class="servicos">
+        <h1>NOSSOS <span>SERVIÇOS</span></h1>
+        <div class="container">
+            <div class="servico">
+                <div class="icone">
+                    <img src="imagens/trator.png" alt="Agronegócio">
+                </div>
+                <h2>AGRONEGÓCIO</h2>
+                <p>+ Produtividade <br> - Custos</p>
+                <p>Gestão de dados e envio de comandos através de dispositivos móveis.</p>
+                <a href="agronegocio.html" style="text-decoration: none;">
+                    <button>Saiba mais</button>
+                </a>  
+            </div>
+
+            <div class="servico">
+                <div class="icone">
+                    <img src="imagens/iot.png" alt="Internet das Coisas">
+                </div>
+                <h2>INTERNET DAS COISAS</h2>
+                <p>+ de 100 integrações.</p>
+                <p>Otimizamos processos no dia a dia e para sua empresa.</p>
+                <a href="iot.html" style="text-decoration: none;">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+
+            <div class="servico">
+                <div class="icone">
+                    <img src="imagens/saude.png" alt="Saúde">
+                </div>
+                <h2>SAÚDE</h2>
+                <p>Usamos tecnologia para salvar vidas.</p>
+                <p>+ auxílio para a descoberta de novos tratamentos.</p>
+                <a href="saude.html" style="text-decoration: none;">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+
+            <div class="servico">
+                <div class="icone">
+                    <img src="imagens/rastreamento.png" alt="Rastreamento de Frota">
+                </div>
+                <h2>RASTREAMENTO DE FROTA</h2>
+                <p>+ de 20 anos de Experiência.</p>
+                <p>+ de 100 Softwares Desenvolvidos.</p>
+                <a href="rastreio.html" style="text-decoration: none;">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--fim section pag 2 serviços-->
+
+<!--inicio section nunca paramos-->
+<section class="slider-section" id="slider"> 
+    <div class="conteudo">
+        <h2>POR AQUI NÓS <span class="nunca-azul">NUNCA</span> PARAMOS</h2>
+        <p>Saiba um pouco mais do que estamos desenvolvendo e inspire-se com estes projetos!</p>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active" id="slide1">
+                <img src="imagens/projeto.png">
+            </div>
+            <div class="slide" id="slide2">
+                <img src="imagens/projeto 2.png">
+            </div>
+        </div>
+        <div class="controles">
+            <input type="radio" name="slider" id="radio1" checked onclick="showSlide(1)">
+            <label for="radio1"></label>
+            <input type="radio" name="slider" id="radio2" onclick="showSlide(2)">
+            <label for="radio2"></label>
+        </div>
+    </div>
+</section>   
+
+<!--inicio section tecnologias-->
+<section class="tecnologias">
+    <h1 class="titulo-tecnologias">
+        <span>NOSSAS <span class="tecnologias-azul"> TECNOLOGIAS</span></span>
+    </h1>
+    <p class="paragrafo-tecnologias">
+        Um pouco das ferramentas que utilizamos para transformar suas ideias em inovação e realidade. 
+    </p>
+    <div class="conteudo-icones-tecnologias">
+        <img src="imagens/tecnologias.png" class="img-icones-tecnologias">
+    </div>
+</section>
+
+<!--fim section tecnologias-->
+
+
+<!--inicio metodo de trabalho section -->
+<section class="metodo-trabalho">
+    <h1>MÉTODO DE TRABALHO <span class="highlight">CODESCRIPT</span></h1>
+    <div class="steps">
+        <div class="step">
+            <img src="imagens/idea-icon.jpeg" alt="Defina suas ideias">
+            <h2>Defina suas <span class="highlight">ideias</span></h2>
+            <p>Apresente as ideias de como você imagina que um aplicativo possa se comportar para alcançar seus objetivos.</p>
+        </div>
+        <div class="step">
+            <img src="imagens/design-icon.jpeg" alt="Design e Desenvolvimento">
+            <h2>Trabalhando com <span class="highlight">Design</span></h2>
+            <p>Nossos especialistas trabalham na modelagem de dados e no design de Interface e de Experiência de suas ideias.</p>
+        </div>
+        <div class="step">
+            <img src="imagens/review-icon.jpeg" alt="Revisão">
+            <h2>Desenvolvimento e <span class="highlight">revisão</span></h2>
+            <p>O produto final é desenvolvido e meticulosamente validado em conjunto com todas as partes.</p>
+        </div>
+    </div>
+</section>
+<!--fim metodo de trabalho section -->
+
+<!--inicio section carrosel de videos-->
+
+
+<section class="video-section">
+    <h1>RECURSOS QUE FARÃO A <span class="diferença-azul">DIFERENÇA</span> NA SUA EMPRESA</h1>
+    
+    <div class="cards">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <video src="videos/tecnologia.mp4" autoplay muted loop></video>
+        <div class="title">Tecnologias de Mapeamento e Dados</div>
+        <div class="hover-text">Transmissão de dados segura e simplificada, garantindo <br>conectividade total para sua empresa.</div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card">
+        <video src="videos/celular.mp4" autoplay muted loop></video>
+        <div class="title">Soluções IoT e Telemetria</div>
+        <div class="hover-text">Soluções de Internet das Coisas e telemetria para monitorar seus ativos em tempo real, garantindo eficiência.</div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="card">
+        <video src="videos/dados-logistica.mp4" autoplay muted loop></video>
+        <div class="title">Transmissão de Dados</div>
+        <div class="hover-text">Soluções de mapeamento e gestão de dados para otimizar processos e gerar insights valiosos.</div>
+      </div>
+  </section>
+
+<!--fim section carrosel de videos-->
+
+<!--inicio section parceiros-->
+<section class="partners-section">
+    <div class="partners-text">
+        <h2>Nossos parceiros são mais do que clientes: são <span class="highlight">aliados</span> na transformação de <span class="highlight">ideias</span> em <span class="highlight">realidade</span>.</h2>
+        <p>Faça como eles:</p>
+    </div>
+    <div class="partners-logos">
+        <img src="imagens/parceiros.png" alt="IFDC">
+    </div>
+    <div class="partners-button">
+        <a href="fale-conosco.html">
+            <button>Saiba mais</button>
+        </a>
+    </div>
+</section>
+
+<!--fim section parceiros-->
+
+<!--inicio section sobre nos-->
+
+<section class="sobre-nos-section">
+    <div class="container-sobre-nos">
+        <div class="sobre-nos-texto">
+            <h1>SOBRE <span class="destaque-azul">NÓS</span></h1>
+            <p>
+                Somos uma empresa inovadora com uma equipe qualificada em tecnologia da informação, 
+                transformando sonhos em realidade há quase uma década. Adoramos desafios e usamos 
+                diversas linguagens e metodologias para realizar ideias.
+            </p>
+            <h2>Por que somos diferentes:</h2>
+            <ul>
+                <li>Busca constante por inovações;</li>
+                <li>Resposta rápida às mudanças do mercado;</li>
+                <li>Conhecimento técnico avançado;</li>
+                <li>Soluções que atendem às expectativas.</li>
+            </ul>
+            <p>
+                Localizada em Passo Fundo, RS, a CodeScript integra uma rede de inovação e networking. 
+                Nosso ambiente acolhedor está sempre aberto para visitas, com café ou chimarrão.
+            </p>
+            <p>Nos siga nas redes sociais!</p>
+            <div class="redes-sociais">
+                <a href="#"><img src="imagens/face.png" alt="Facebook"></a>
+                <a href="#"><img src="imagens/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="sobre-nos-imagem">
+            <img src="imagens/equipe.png" alt="Foto CodeScript">
+        </div>
+    </div>
+</section>
+
+<!--fim section sobre nos-->
+
+<!--inicio section contato e loc-->
+
+<section class="footer">
+    <div class="footer-container">
+        <!-- Mapa do site -->
+        <div class="site-map">
+            <p><strong>Mapa do site</strong></p>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Atuação</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- Informação de contato -->
+        <div class="contact-info">
+            <div class="location">
+                <p><strong>Localização</strong></p>
+                <p>Edifício Privilégium</p>
+                <p>R. Quinze de Novembro, 918, Centro, sala 1102, Passo Fundo - RS</p>
+            </div>
+            <div class="contact">
+                <p><strong>Entre em contato</strong></p>
+                <p> +55 (54) 9 9966-0470</p>
+                <p> atendimento@codescript.com.br</p>
+                <img src="imagens/logo azul.png">
+            </div>
+        </div>
+
+        <!-- QR Code e ET -->
+        <div class="qr-et">
+            <p><strong>Aponte a câmera</strong></p>
+            <img src="imagens/qr code.png" alt="QR Code">
+            <img src="imagens/et.png" alt="ET" class="et-image">
+        </div>
+    </div>
+
+    <!-- Rodapé inferior com mídias sociais e direitos autorais -->
+    <div class="footer-bottom">
+        <div class="social-media">
+            <a href="https://www.facebook.com/codescript.tech/"><img src="imagens/face.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://www.youtube.com/watch?v=Rbz7GGBr7hE"><img src="imagens/youtube.png" alt="YouTube" class="social-icon"></a>
+            <a href="https://br.linkedin.com/company/codescript-tech"><img src="imagens/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+            <a href="https://www.instagram.com/codescript.tech/"><img src="imagens/instagram.png" alt="Instagram" class="social-icon"></a>
+        </div>
+        <div class="legal-info">
+            <p>Copyright © 2024 CodeScript Tecnologia - Todos os direitos reservados.</p>
+        </div>
+    </div>
+</section>    
+
+<!--fim section contato e loc-->
+
+
+
+<script>
+//inicio funcionalidade dos videos inicial clique, radio bar etc//
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+});
+
+let videoBtn = document.querySelectorAll('.video-btn');
+videoBtn.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        // Remover a classe active de todos os botões
+        document.querySelector('.controles .active').classList.remove('active');
+        btn.classList.add('active');
+
+        // Atualizar o vídeo exibido
+        let src = btn.getAttribute('data-src');
+        let videoSlider = document.querySelector('#video-slider');
+        videoSlider.src = src;
+        
+        // Parar todos os vídeos antes de iniciar um novo
+        videoSlider.pause();
+        videoSlider.load();
+        videoSlider.play();
+
+        // Mostrar ou ocultar os links "Saiba mais" conforme o vídeo ativo
+        document.querySelectorAll('.video-conteiner').forEach((container, containerIndex) => {
+            container.style.display = (containerIndex === index) ? 'block' : 'none';
+        });
+    });
+});
+
+
+//fim funcionalidade dos videos inicial clique, radio bar etc//
+
+
+
+// inicia aq o JS do sub menu em atuação//
+    // Função para abrir e fechar o dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Alterna a visibilidade do submenu ao clicar
+        dropbtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita comportamento de link
+            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
+        });
+
+        // Fecha o submenu ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+            }
+        });
+    });
+// fim JS do sub menu em atuação//
+
+
+function showSlide(slideNumber) {
+    const slides = document.querySelectorAll('.slide');
+
+    for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
+        if (i === slideNumber - 1) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    }
+}
+// Inicializa o primeiro slide
+showSlide(1);
+
+
+
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trabalhe-conosco.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Trabalhe Conosco</title>
+</head>
+<body>
+    <!--header inicia-->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>        
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="index2.html#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+    
+    <section class="trabalhe-conosco-section">
+        <div class="trabalhe-conosco-wrapper">
+            <!-- Div esquerda: Formulário -->
+            <div class="formulario-container">
+                <h1>Trabalhe Conosco</h1>
+                <p>Você é apaixonado por tecnologias? Gosta de enfrentar desafios? Nos envie seu currículo e vamos conversar <span>😊</span></p>
+
+                
+                <form id="uploadForm">
+                    <input type="text" id="nome" placeholder="Seu nome">
+                    <input type="email" id="email" placeholder="Email">
+                    
+                    <!-- Campo para upload de arquivo -->
+                    <div class="file-input-wrapper">
+                        <label for="curriculo" id="fileLabel">Procurar</label>
+                        <input type="file" id="curriculo" name="curriculo">
+                    </div>
+                
+                    <button type="submit">Enviar</button>
+                </form>
+                
+                <!-- Modal -->
+                <div id="myModal" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="successMessage">Currículo enviado com sucesso! Havendo oportunidade entraremos em contato 😊</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Div direita: Texto e imagem -->
+            <div class="info-container">
+                <h2>O que esperamos de você?</h2>
+                <ul>
+                    <li>Conhecimento Técnico;</li>
+                    <li>Espírito Colaborativo;</li>
+                    <li>Criatividade;</li>
+                    <li>Comprometimento com a Qualidade;</li>
+                    <li>Vontade de Aprender.</li>
+                </ul>
+                <p>Se você se identifica, envie seu currículo para a CodeScript. <br>Estamos ansiosos para conhecer você!</p>
+                <img src="imagens/trabalhe-conosco-imagem.png" alt="Trabalho em equipe na CodeScript">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("uploadForm");
+            const modal = document.getElementById("myModal");
+            const closeModal = document.querySelector(".close");
+            const successMessage = document.getElementById("successMessage");
+            const fileInput = document.getElementById("curriculo");
+            const fileLabel = document.getElementById("fileLabel");
+            
+            // Evento para exibir o nome do arquivo selecionado
+            fileInput.addEventListener("change", function(event) {
+                const fileName = event.target.files[0].name;
+                fileLabel.textContent = fileName; // Atualiza o texto do label com o nome do arquivo
+            });
+        
+            // Evento de submissão do formulário
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita o envio real do formulário
+                
+                const nome = document.getElementById("nome").value;
+                const email = document.getElementById("email").value;
+                const curriculo = document.getElementById("curriculo").files[0];
+        
+                // Verifica se os campos estão preenchidos e o arquivo foi selecionado
+                if (nome && email && curriculo) {
+                    // Mostra o modal de sucesso
+                    modal.classList.remove("hidden");
+                    successMessage.textContent = "Currículo enviado com sucesso! Havendo oportunidade entraremos em contato 😊";
+                } else {
+                    alert("Por favor, preencha todos os campos e envie o currículo.");
+                }
+            });
+        
+            // Evento para fechar o modal
+            closeModal.addEventListener("click", function() {
+                modal.classList.add("hidden"); // Esconde o modal
+                
+                // Limpa os campos do formulário após fechar o modal
+                document.getElementById("nome").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("curriculo").value = "";
+                fileLabel.textContent = "Procurar"; // Reseta o label para "Procurar"
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="iot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Iot - CodeScript</title>
+</head>
+<body>
+    <!-- Incluindo o cabeçalho -->
+    <header>
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
+        <a href="index.html">
+            <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index2.html">Inicio</a>
+            <div class="dropdown">
+                <a href="#Atuação" class="dropbtn">Atuação</a>
+                <div class="dropdown-content">
+                    <a href="agronegocio.html">Agronegócio</a>
+                    <a href="iot.html">IoT</a>
+                    <a href="saude.html">Saúde</a>
+                    <a href="rastreio.html">Rastreamento de Frota</a>
+                </div>
+            </div>
+            <a href="index2.html#slider">Projetos</a>
+            <a href="sobre nos.html">Sobre Nós</a>
+            <a href="trabalhe-conosco.html">Carreira</a>
+            <a href="fale-conosco.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <section class="container">
+        <div class="image-content-superior">
+            <img src="imagens/solda1.png" alt="Agronegócio 1">
+        </div>
+        <div class="text-content">
+            <h1>A INTERNET DAS COISAS <span class="highlight">TRANSFORMA</span><br> O COTIDIANO</h1>
+            <p>Este conceito é uma tendência que está se tornando cada vez mais proeminente, visto as oportunidades e facilidades existentes em se trazer todo o tipo de objetos de nosso cotidiano para dentro da Internet e fazê-los compartilhar dados entre si e com os sistemas e aplicativos que já habitam o espaço digital.</p>
+            <p> Isso refere-se ao conceito de conectar à Internet todo tipo de eletrodoméstico, equipamento ou mobília de um ambiente e fazer estes objetos se comunicarem entre si e com dispositivos computacionais tradicionais.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="text-content">
+            <h2>SOLUÇÕES</h2>
+            <ul>
+                <li>
+                    <img src="imagens/hardware.png" class="icone-hardware">
+                        <div>
+                            <strong>Saúde</strong> - Implementação de dispositivos de monitoramento de saúde que coletam dados vitais, como batimentos cardíacos e níveis de glicose, otimizando o acompanhamento de pacientes.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/dispositivo-movel.png" class="icone-mobile">
+                        <div>
+                            <strong>Dispositivos Eletrônicos</strong> - Lançamento de aplicativos que possibilitam o monitoramento em tempo real das rotas, além de oferecer sugestões de caminhos alternativos e notificações sobre eventuais problemas no percurso.
+                        </div>
+                </li>
+                <li>
+                    <img src="imagens/sistema-gestao.png" class="icone-gestao">
+                        <div>
+                          <strong>Conectando objetos do cotidiano</strong> - Desenvolvimento de plataformas que integram dados de dispositivos conectados, permitindo uma gestão centralizada e geração de relatórios que aprimoram a eficiência operacional.
+                        </div>
+                </li>
+            </ul>
+            <a href="fale-conosco.html" style="text-decoration: none;">
+                <button>Fale conosco</button>
+            </a>            
+        </div>
+        <div class="image-content-inferior">
+            <img src="imagens/solda2.png" alt="Agronegócio 2">
+        </div>
+    </section>
+<script>
+
+    // inicia aq o JS do sub menu em atuação//
+    // Função para abrir e fechar o dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropbtn = document.querySelector('.dropbtn');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Alterna a visibilidade do submenu ao clicar
+        dropbtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita comportamento de link
+            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
+        });
+
+        // Fecha o submenu ao clicar fora dele
+        window.addEventListener('click', function (event) {
+            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+            }
+        });
+    });
+// fim JS do sub menu em atuação//
+
+
+</script>
+</body>
+</html>
