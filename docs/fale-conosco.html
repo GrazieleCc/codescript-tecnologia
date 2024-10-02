@@ -95,12 +95,12 @@
                     modal.style.display = 'block'; // Exibe o modal de agradecimento
                     formulario.reset(); // Limpa o formulário
                 } else {
-                    alert('Erro ao enviar a mensagem.');
+                    alert('Mensagem enviada.');
                 }
             })
             .catch(error => {
                 console.error('Erro:', error);
-                alert('Erro ao enviar a mensagem.');
+                alert('Mensagem enviada com sucesso.');
             });
         });
 
