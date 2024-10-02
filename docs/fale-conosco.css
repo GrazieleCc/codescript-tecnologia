@@ -1,52 +1,52 @@
-*{
+* {
     font-family: 'Inter', sans-serif; /* Aplica a fonte Inter ao corpo do documento */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-decoration: none;
     transition: all .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 6rem; /*faz a ação de rolar ate onde cliquei no meu fixo*/
+    scroll-padding-top: 6rem; /* Faz a ação de rolar até onde cliquei no menu fixo */
     scroll-behavior: smooth;
 }
 
-section{
+section {
     padding: 2rem 9%;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     padding: 2.5rem 0;
 }
 
-.titulo span{
+.titulo span {
     font-size: 5rem;
     color: #0d1837;
-    border-radius:  .5rem;
+    border-radius: .5rem;
     padding: .2rem 1rem;
-
 }
 
-.titulo .servicos-azul{
+.titulo .servicos-azul {
     color: #0285f4;
 }
 
-
-
-header{ /*explorar aq dps*/
+header { /* Explorar depois */
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #0d1837;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:2rem 9%;
+    padding: 2rem 9%;
 }
 
 .logo {
@@ -55,14 +55,13 @@ header{ /*explorar aq dps*/
     display: block;
 }
 
-
-header .navbar a{
+header .navbar a {
     color: #ededed;
     font-size: 2rem;
     margin: 0 .8rem;
 }
 
-#menu-bar{
+#menu-bar {
     color: #ededed;
     font-size: 3rem;
     padding: .5rem 1.2rem;
@@ -70,7 +69,7 @@ header .navbar a{
     display: none;
 }
 
-.home{
+.home {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -80,13 +79,11 @@ header .navbar a{
     z-index: 0;
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     color: #0285f4;
 }
 
-
 /* Estilos existentes... */
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -158,7 +155,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.contato-container .codescript-azul{
+.contato-container .codescript-azul {
     color: #0285f4;
 }
 
@@ -168,7 +165,6 @@ body {
     text-align: center;
     margin-bottom: 1rem;
 }
-
 
 .contato-content {
     display: flex;
@@ -207,7 +203,7 @@ button {
 }
 
 button:hover {
-    background-color:#0285f4;
+    background-color: #0285f4;
 }
 
 /* Contato Info */
@@ -221,19 +217,13 @@ button:hover {
 .contato-info p {
     font-size: 2rem;
     margin: 1rem 0;
-}
-
-.contato-info p {
-    font-size: 2rem;
-    margin: 1rem 0;
-    display: flex;  /* Alinha os ícones e o texto em uma linha */
-    align-items: center;  /* Centraliza verticalmente */
+    display: flex; /* Alinha os ícones e o texto em uma linha */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .contato-info strong {
     margin-right: 10px; /* Ajusta o espaçamento após o : */
 }
-
 
 .contato-info .icon {
     width: 24px; /* Define o tamanho dos ícones */
@@ -246,7 +236,6 @@ button:hover {
     height: auto;
     margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
-
 
 .social-icons {
     margin-top: 2rem;
