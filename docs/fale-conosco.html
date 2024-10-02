@@ -83,10 +83,10 @@
         formulario.addEventListener('submit', function(event) {
             event.preventDefault(); // Evita o envio padrão do formulário
 
-            const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
+            const recaptchaResponse = grecaptcha.getResponse(); // Obtém a resposta do reCAPTCHA
 
             if (!recaptchaResponse) {
-                alert('Por favor, confirme que você não é um robô.');
+                alert('Por favor, confirme que você não é um robô.'); // Verifica se o reCAPTCHA foi clicado
                 return;
             }
 
@@ -111,7 +111,7 @@
             });
         });
 
-        // Fechar o modal e limpar o formulário quando o botão "Fechar" for clicado
+        // Fechar o modal quando o botão "Fechar" for clicado
         closeModal.addEventListener('click', function() {
             modal.style.display = 'none'; // Esconde o modal
         });
