@@ -64,7 +64,7 @@
                 <div id="myModal" class="modal hidden">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p id="successMessage">Currículo enviado com sucesso!</p>
+                        <p id="successMessage">Currículo enviado!</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@ mobileNavbar.init();
                 if (nome && email && curriculo) {
                     // Mostra o modal de sucesso
                     modal.classList.remove("hidden");
-                    successMessage.textContent = "Currículo enviado com sucesso!";
+                    successMessage.textContent = "Currículo enviado!";
                 } else {
                     alert("Por favor, preencha todos os campos e envie o currículo.");
                 }
