@@ -423,3 +423,43 @@ body {
     margin-right: -3rem;
   }
 }
+
+
+/* tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+        max-width: 600px; 
+    }
+
+    .close {
+        font-size: 32px; 
+    }
+}
+
+/* desktops */
+@media (min-width: 901px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 50%;
+        max-width: 800px; 
+    }
+
+    .close {
+        font-size: 36px; 
+    }
+}
+
+/* Estilos para smartphones */
+@media (max-width: 599px) {
+    .modal-content {
+        margin: 20% auto; 
+        width: 90%;
+        max-width: 350px; 
+    }
+
+    .close {
+        font-size: 24px; 
+    }
+}
