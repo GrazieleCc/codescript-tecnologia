@@ -293,25 +293,19 @@ body {
 .info-container {
     width: 45%;
     text-align: center;
+    display: flex;
+    justify-content: flex-end; /* Move o conteúdo (imagem) para a direita */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    height: 100vh; /* Isso ajusta a altura do contêiner à altura total da tela */
 }
-
 
 .info-container img {
     max-width: 40rem;
     height: auto;
-
 }
 
-.info-container ul {
-    list-style-type:circle;
-    padding-left: 10px;
 
-}
 
-.info-container ul li {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
-}
 
 @media (max-width: 768px) {
     .trabalhe-conosco-wrapper {
