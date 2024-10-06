@@ -83,13 +83,79 @@ header .navbar a:hover {
     color: #0285f4;
 }
 
-/* Estilos existentes... */
-.dropdown {
+  /* inicio menu em mobile */
+  .mobile-menu{
+    cursor: pointer;
+    display: none;
+  
+  }
+  
+  .mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #ededed;
+    margin: 8px;
+    transition: 0.3s;
+  
+  }
+
+  
+  
+  header{ /*explorar aq dps*/
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #0d1837;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+  }
+  
+  .logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+  }
+  
+  
+  header .navbar a{
+    color: #ededed;
+    font-size: 2rem;
+    margin: 0 .8rem;
+  }
+  
+  #menu-bar{
+    color: #ededed;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+  }
+  
+  header .navbar a:hover{
+    color: #0285f4;
+  }
+  
+  
+  /* Estilos existentes... */
+  
+  .dropdown {
     position: relative;
     display: inline-block;
-}
-
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     visibility: hidden; /* Esconde o menu inicialmente */
     opacity: 0; /* Invisível inicialmente */
     position: absolute;
@@ -102,36 +168,36 @@ header .navbar a:hover {
     display: flex; /* Mantém o alinhamento */
     flex-direction: column; /* Mantém os itens alinhados verticalmente */
     transition: visibility 0.3s, opacity 0.3s ease-in-out; /* Transição suave */
-}
-
-.dropdown-content a {
+  }
+  
+  .dropdown-content a {
     color: #ededed;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-size: 1.6rem;
     white-space: nowrap; /* Evita quebra de linha nos itens do dropdown */
-}
-
-.dropdown-content a:hover {
+  }
+  
+  .dropdown-content a:hover {
     background-color: #14213d;
-}
-
-/* Quando o menu estiver visível, as propriedades são alteradas */
-.show {
+  }
+  
+  /* Quando o menu estiver visível, as propriedades são alteradas */
+  .show {
     visibility: visible;
     opacity: 1;
-}
-
-/* Ajustes para garantir que os itens não sejam deslocados */
-.navbar a, .dropdown {
+  }
+  
+  /* Ajustes para garantir que os itens não sejam deslocados */
+  .navbar a, .dropdown {
     display: inline-block;
     vertical-align: middle; /* Mantém alinhamento vertical */
-}
-
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     flex-direction: column; /* Garante que os itens fiquem em coluna */
-}
+  }
 
 /* NOVA SEÇÃO DE CONTATO */
 body {
@@ -234,7 +300,7 @@ button:hover {
 .contato-info .icon-telefone {
     width: 30px; /* Define o tamanho dos ícones */
     height: auto;
-    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 6px; /* Espaçamento entre o ícone e o texto */
 }
 
 .social-icons {
@@ -285,4 +351,115 @@ button:hover {
     display: none; /* Escondido por padrão */
     color: #0d1837;
     margin-top: 1rem; /* Margem superior */
+}
+
+.whatsapp-link {
+  text-decoration: underline;
+  color: inherit; /* Mantém a cor original do texto */
+}
+.whatsapp-link:hover {
+  color: #25D366; /* Cor verde do WhatsApp ao passar o mouse */
+}
+
+
+
+
+
+
+@media (max-width: 999px) {
+  /* Ajustes gerais para o menu em mobile */
+  .navbar {
+    display: flex;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #0d1837;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .navbar a {
+    margin-left: 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Sem keyframes */
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar.active {
+    transform: translateX(0);
+  }
+
+  .navbar.active a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .dropdown-content {
+    display: none !important;
+  }
+
+}
+@media (max-width: 768px) {
+  .contato-info {
+      display: flex;
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center; /* Centraliza horizontalmente */
+      text-align: center; /* Centraliza o texto dentro da div */
+      padding: 1rem; /* Adiciona algum espaçamento */
+  }
+
+  .contato-info p {
+      margin: 0.5rem 0; /* Espaçamento entre os parágrafos */
+      font-size: 1.5rem;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: row; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: space-around;
+  }
+
+}
+
+
+@media (max-width: 999px) {
+  .contato-info {
+      display: flex;
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center; /* Centraliza horizontalmente */
+      text-align: center; /* Centraliza o texto dentro da div */
+      padding: 1rem; /* Adiciona algum espaçamento */
+  }
+
+  .contato-info p {
+      margin: 0.5rem 0; /* Espaçamento entre os parágrafos */
+      font-size: 1.5rem;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: space-around;
+    margin-left: -2rem;
+  }
 }
