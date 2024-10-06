@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="agronegocio.css].css">
+    <link rel="stylesheet" href="saude.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Agronegócio - CodeScript</title>
+    <title>Saúde - CodeScript</title>
 </head>
 <body>
     <!-- Incluindo o cabeçalho -->
@@ -16,8 +16,13 @@
         <a href="index.html">
             <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
         </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
         <nav class="navbar">
-            <a href="index2.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <div class="dropdown">
                 <a href="#Atuação" class="dropbtn">Atuação</a>
                 <div class="dropdown-content">
@@ -27,7 +32,7 @@
                     <a href="rastreio.html">Rastreamento de Frota</a>
                 </div>
             </div>
-            <a href="index2.html#slider">Projetos</a>
+            <a href="index.html#slider">Projetos</a>
             <a href="sobre nos.html">Sobre Nós</a>
             <a href="trabalhe-conosco.html">Carreira</a>
             <a href="fale-conosco.html">Contato</a>
@@ -41,15 +46,15 @@
         </div>
         <div class="text-content">
             <h1>POTENCIALIZANDO A MEDICINA COM <span class="highlight"><br>A TECNOLOGIA</span></h1>
-            <p>A Medicina moderna fez avanços significativos no último século, aprimorando nossa compreensão do corpo e da mente humana, além de melhorar a prevenção e o tratamento de doenças, e a resposta a crises de saúde.</p>
-            <p>A Tecnologia na medicina tem o objetivo de otimizar processos e impulsionar pesquisas para novos tratamentos.</p>
-            <p>Inovações como aplicativos e dispositivos de Internet das Coisas têm proporcionado maior precisão e diversidade de dados, beneficiando tanto médicos quanto pacientes.</p>
+            <p>A Medicina moderna fez grandes avanços no último século, aprimorando nossa compreensão do corpo e da mente, além de melhorar a prevenção e o tratamento de doenças.</p>
+            <p>A Tecnologia na medicina tem o objetivo de otimizar processos e impulsionar pesquisas de novos tratamentos.</p>
+            <p>Inovações como aplicativos e dispositivos conectados proporcionam maior precisão e diversidade de dados, beneficiando médicos e pacientes em suas interações diárias.</p>
         </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="container-solucoes">
         <div class="text-content">
-            <h2>SOLUÇÕES</h2>
+            <h1>SOLUÇÕES</h1>
             <ul>
                 <li>
                     <img src="imagens/hardware.png" class="icone-hardware">
@@ -70,9 +75,11 @@
                         </div>
                 </li>
             </ul>
-            <a href="fale-conosco.html" style="text-decoration: none;">
-                <button>Fale conosco</button>
-            </a>
+            <div class="full-screen-container">
+                <a href="fale-conosco.html" style="text-decoration: none;">
+                    <button>Fale conosco</button>
+                </a>
+            </div>    
         </div>
         <div class="image-content-inferior">
             <img src="imagens/exame.png">
@@ -80,26 +87,73 @@
     </section>
 <script>
 
-    // inicia aq o JS do sub menu em atuação//
-    // Função para abrir e fechar o dropdown
-    document.addEventListener('DOMContentLoaded', function () {
-        const dropbtn = document.querySelector('.dropbtn');
-        const dropdownContent = document.querySelector('.dropdown-content');
+// Função para abrir e fechar o dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-        // Alterna a visibilidade do submenu ao clicar
-        dropbtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita comportamento de link
-            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
-        });
+    // Função para alternar visibilidade do dropdown
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show');
+    }
 
-        // Fecha o submenu ao clicar fora dele
-        window.addEventListener('click', function (event) {
-            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
-                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
-            }
-        });
+    // Adiciona listener para o botão de atuação
+    dropbtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Verifica se está em mobile
+        const isMobile = window.innerWidth <= 999; 
+        if (isMobile) {
+            // Redireciona para a seção "redirecionando-servicos" na página index.html
+            window.location.href = "index.html#redirecionando-servicos"; 
+        } else {
+            // Se não estiver em mobile, abre o submenu
+            toggleDropdown();
+        }
     });
-// fim JS do sub menu em atuação//
+
+    // Fecha o submenu ao clicar fora dele
+    window.addEventListener('click', function (event) {
+        if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+        }
+    });
+});
+
+// Classe para o menu responsivo
+class MobileNavbar {
+    constructor(mobileMenu, navbar, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navbar = document.querySelector(navbar);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.navbar.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".navbar",      
+    ".navbar a"
+);
+mobileNavbar.init();
 
 
 </script>
