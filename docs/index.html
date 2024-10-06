@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Inicio - CodeScript</title>
 </head>
 <body>
-    <!--header inicia-->
     <header>
-        <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
         <a href="index.html">
             <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
-        </a>        
+        </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
         <nav class="navbar">
-            <a href="index2.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <div class="dropdown">
                 <a href="#Atuação" class="dropbtn">Atuação</a>
                 <div class="dropdown-content">
@@ -27,7 +31,7 @@
                     <a href="rastreio.html">Rastreamento de Frota</a>
                 </div>
             </div>
-            <a href="#slider">Projetos</a>
+            <a href="index.html#slider">Projetos</a>
             <a href="sobre nos.html">Sobre Nós</a>
             <a href="trabalhe-conosco.html">Carreira</a>
             <a href="fale-conosco.html">Contato</a>
@@ -36,35 +40,52 @@
 
     <!--home inicia-->
     <section class="home" id="home">
-        <div class="conteiner">
-        </div>
 
         <div class="controles">
         <span class="video-btn active" data-src="video-agro.mp4"></span>
         <span class="video-btn" data-src="video-rastreio.mp4"></span>
         <span class="video-btn" data-src="video-tecnologia.mp4"></span>
         </div>
+
         <div class="video-conteiner">
+            <div class="overlay"> <br>TECNOLOGIA NO AGRONEGÓCIO</div>
+            <div class="overlay-p">
+                Com a ajuda da tecnologia otimizamos <br> 
+                processos e oferecemos praticidade <br> 
+                ao produtor rural.
+            </div>
             <video src="video-agro.mp4" id="video-slider" loop autoplay muted></video>
             <a href="agronegocio.html" class="btn">Saiba mais</a>
         </div>
+        
     
         <div class="video-conteiner" style="display: none;">
-            <video src="video-rastreio.mp4" loop autoplay muted></video>
+            <div class="overlay"> <br>INOVAÇÃO EM LOGÍSTICA</div>
+            <div class="overlay-p">
+                Com tecnologia de ponta <br> 
+                transformamos a logística veicular e 
+                <br>potencializamos a eficiência do seu negócio. </div>
+            <video src="video-rotas.mp4" loop autoplay muted></video>
             <a href="rastreio.html" class="btn">Saiba mais</a>
         </div>
     
-        <div class="video-conteiner" style="display: none;">
-            <video src="video-tecnologia.mp4" loop autoplay muted></video>
-            <a href="iot.html" class="btn">Saiba mais</a>
+        <div class="video-conteiner"style="display: none;">
+            <div class="overlay"> <br>O QUE VOCÊ PRECISA</div>
+            <div class="overlay-p">
+                Com soluções personalizadas <br> 
+                atendemos às suas necessidades e impulsionamos seu sucesso. 
+                <br> Conheça mais sobre nós. </div>
+            <video src="video-pc.mp4" loop autoplay muted></video>
+            <a href="video-pc.mp4" class="btn">Saiba mais</a>
         </div>
 
     </section>
+    
     <!--home chega ao fim-->
 
 
     <!--inicio section pag 2 serviços-->
-    <section class="servicos">
+    <section class="servicos" id="redirecionando-servicos">
         <h1>NOSSOS <span>SERVIÇOS</span></h1>
         <div class="container">
             <div class="servico">
@@ -116,6 +137,7 @@
             </div>
         </div>
     </section>
+
     <!--fim section pag 2 serviços-->
 
 <!--inicio section nunca paramos-->
@@ -148,12 +170,20 @@
         <span>NOSSAS <span class="tecnologias-azul"> TECNOLOGIAS</span></span>
     </h1>
     <p class="paragrafo-tecnologias">
-        Um pouco das ferramentas que utilizamos para transformar suas ideias em inovação e realidade. 
+        Um pouco das ferramentas que utilizamos para transformar <br>suas ideias em inovação e realidade.
     </p>
     <div class="conteudo-icones-tecnologias">
-        <img src="imagens/tecnologias.png" class="img-icones-tecnologias">
+        <img src="imagens/flutter.png" alt="Tecnologia 1" class="img-icones-tecnologias">
+        <img src="imagens/react.png" alt="Tecnologia 2" class="img-icones-tecnologias">
+        <img src="imagens/nodejs.png" alt="Tecnologia 3" class="img-icones-tecnologias">
+        <img src="imagens/laravel.png" alt="Tecnologia 4" class="img-icones-tecnologias">
+        <img src="imagens/oracle.png" alt="Tecnologia 5" class="img-icones-tecnologias">
+        <img src="imagens/postgre.png" alt="Tecnologia 6" class="img-icones-tecnologias">
+        <img src="imagens/mysql.png" alt="Tecnologia 7" class="img-icones-tecnologias">
+        <img src="imagens/spring.png" alt="Tecnologia 8" class="img-icones-tecnologias">
     </div>
 </section>
+
 
 <!--fim section tecnologias-->
 
@@ -243,11 +273,19 @@
                 diversas linguagens e metodologias para realizar ideias.
             </p>
             <h2>Por que somos diferentes:</h2>
-            <ul>
-                <li>Busca constante por inovações;</li>
-                <li>Resposta rápida às mudanças do mercado;</li>
-                <li>Conhecimento técnico avançado;</li>
-                <li>Soluções que atendem às expectativas.</li>
+            <ul class="custom-list">
+                <li>
+                    <span class="item-text">Busca constante por inovações;</span>
+                </li>
+                <li>
+                    <span class="item-text">Resposta rápida às mudanças do mercado;</span>
+                </li>
+                <li>
+                    <span class="item-text">Conhecimento técnico avançado;</span>
+                </li>
+                <li>
+                    <span class="item-text">Soluções que atendem às expectativas.</span>
+                </li>
             </ul>
             <p>
                 Localizada em Passo Fundo, RS, a CodeScript integra uma rede de inovação e networking. 
@@ -255,10 +293,10 @@
             </p>
             <p>Nos siga nas redes sociais!</p>
             <div class="redes-sociais">
-                <a href="#"><img src="imagens/face.png" alt="Facebook"></a>
-                <a href="#"><img src="imagens/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
-                <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/codescript.tech/"><img src="imagens/face.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/watch?v=Rbz7GGBr7hE"><img src="imagens/youtube.png" alt="YouTube"></a>
+                <a href="https://br.linkedin.com/company/codescript-tech"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/codescript.tech/"><img src="imagens/instagram.png" alt="Instagram"></a>
             </div>
         </div>
         <div class="sobre-nos-imagem">
@@ -277,11 +315,11 @@
         <div class="site-map">
             <p><strong>Mapa do site</strong></p>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Atuação</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#redirecionando-servicos">Atuação</a></li>
+                <li><a href="sobre nos.html">Sobre Nós</a></li>
+                <li><a href="index.html#slider">Projetos</a></li>
+                <li><a href="trabalhe-conosco.html">Contato</a></li>
             </ul>
         </div>
 
@@ -294,7 +332,7 @@
             </div>
             <div class="contact">
                 <p><strong>Entre em contato</strong></p>
-                <p> +55 (54) 9 9966-0470</p>
+                <p><a href="https://wa.me/5554999660470" class="whatsapp-link">+55 (54) 9 9966-0470</a></p>
                 <p> atendimento@codescript.com.br</p>
                 <img src="imagens/logo azul.png">
             </div>
@@ -365,26 +403,76 @@ videoBtn.forEach((btn, index) => {
 
 
 
-// inicia aq o JS do sub menu em atuação//
-    // Função para abrir e fechar o dropdown
-    document.addEventListener('DOMContentLoaded', function () {
-        const dropbtn = document.querySelector('.dropbtn');
-        const dropdownContent = document.querySelector('.dropdown-content');
+// Função para abrir e fechar o dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-        // Alterna a visibilidade do submenu ao clicar
-        dropbtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita comportamento de link
-            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
-        });
+    // Função para alternar visibilidade do dropdown
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show');
+    }
 
-        // Fecha o submenu ao clicar fora dele
-        window.addEventListener('click', function (event) {
-            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
-                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
-            }
-        });
+    // Adiciona listener para o botão de atuação
+    dropbtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Verifica se está em mobile
+        const isMobile = window.innerWidth <= 999; 
+        if (isMobile) {
+            // Redireciona para a seção "redirecionando-servicos" na página index.html
+            window.location.href = "index.html#redirecionando-servicos"; 
+        } else {
+            // Se não estiver em mobile, abre o submenu
+            toggleDropdown();
+        }
     });
-// fim JS do sub menu em atuação//
+
+    // Fecha o submenu ao clicar fora dele
+    window.addEventListener('click', function (event) {
+        if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+        }
+    });
+});
+
+// Classe para o menu responsivo
+class MobileNavbar {
+    constructor(mobileMenu, navbar, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navbar = document.querySelector(navbar);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.navbar.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".navbar",      
+    ".navbar a"
+);
+mobileNavbar.init();
+
+
+
 
 
 function showSlide(slideNumber) {
@@ -404,9 +492,6 @@ showSlide(1);
 
 
 
-
-
 </script>
-    
 </body>
 </html>
