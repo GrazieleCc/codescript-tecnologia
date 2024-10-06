@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Agronegócio - CodeScript</title>
+    <title>Rastreio - CodeScript</title>
 </head>
 <body>
     <!-- Incluindo o cabeçalho -->
@@ -16,8 +16,13 @@
         <a href="index.html">
             <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
         </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
         <nav class="navbar">
-            <a href="index2.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <div class="dropdown">
                 <a href="#Atuação" class="dropbtn">Atuação</a>
                 <div class="dropdown-content">
@@ -27,7 +32,7 @@
                     <a href="rastreio.html">Rastreamento de Frota</a>
                 </div>
             </div>
-            <a href="index2.html#slider">Projetos</a>
+            <a href="index.html#slider">Projetos</a>
             <a href="sobre nos.html">Sobre Nós</a>
             <a href="trabalhe-conosco.html">Carreira</a>
             <a href="fale-conosco.html">Contato</a>
@@ -41,38 +46,40 @@
         </div>
         <div class="text-content">
             <h1>TRAÇANDO A <span class="highlight">ROTA</span> <br>PARA O SEU NEGÓCIO</h1>
-            <p>Empresas precisam, de diversas formas, atravessar bairros, cidades e rodovias no decorrer de suas atividades. Estes deslocamentos tomam tempo, custam dinheiro e inclusive podem envolver riscos para o negócio e seus colaboradores.</p>
-            <p>Conhecer o melhor caminho a seguir e gerenciar veículos em trajeto não é apenas uma conveniência, é uma necessidade.</p>
-            <p>Algumas de nossas experiências incluem desenvolvimentos de softwares na qual criamos soluções para monitoramento veicular, gestão de frotas, gerenciamento de risco, roteirização e jornada de trabalho.</p>
+            <p>Empresas precisam atravessar bairros, cidades e rodovias em suas atividades, o que consome tempo, gera custos e pode apresentar riscos para o negócio e seus colaboradores.</p>
+            <p>Conhecer o melhor trajeto e gerenciar veículos é essencial para a eficiência operacional.</p>
+            <p>Desenvolvemos soluções em software para monitoramento veicular, gestão de frotas, gerenciamento de risco, roteirização e otimização da jornada de trabalho.</p>
         </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="container-solucoes">
         <div class="text-content">
-            <h2>SOLUÇÕES</h2>
+            <h1>SOLUÇÕES</h1>
             <ul>
                 <li>
                     <img src="imagens/hardware.png" class="icone-hardware">
                         <div>
-                            <strong>Monitoramento e Gestão de frota</strong> - Comunique-se via sistema com os equipamentos e tecnologias de seus veículos. Não apenas para monitorar sua localização atual, mas realizar um trabalho completo de supervisão de sua frota, fazendo tomada de decisão com base nos dados reais de cada veículo.
+                            <strong>Monitoramento e Gestão de frota</strong> - Comunique-se com os equipamentos e tecnologias dos veículos para monitorar a localização e realizar uma supervisão completa da frota, tomando decisões com base nos dados reais de cada veículo.
                         </div>
                 </li>
                 <li>
                     <img src="imagens/dispositivo-movel.png" class="icone-mobile">
                         <div>
-                            <strong>Roteirização</strong> - Combinar dados cartográficos atualizados com as regras do seu negócio para encontrar o melhor trajeto a ser seguido. O cálculo para gerar as rotas objetiva resultados que entregam o caminho mais econômico e viável, de acordo com os pontos que precisam ser visitados.
+                            <strong>Roteirização</strong> - Combine dados cartográficos atualizados com as regras do negócio para encontrar o melhor trajeto, gerando rotas que entregam o caminho mais econômico e viável, conforme os pontos a serem visitados.
                         </div>
                 </li>
                 <li>
                     <img src="imagens/sistema-gestao.png" class="icone-gestao">
                         <div>
-                            <strong>Jornada de trabalho</strong> - Gerenciar criteriosamente a jornada de trabalho do condutor através da intermediação por um sistema automatizado que segue as regras da empresa e possui conformidade com a legislação, aumentando a segurança jurídica das empresas.
+                            <strong>Jornada de trabalho</strong> - Gerencie a jornada de trabalho do condutor por meio de um sistema automatizado que segue as regras da empresa e está em conformidade com a legislação, aumentando a segurança jurídica.
                         </div>
                 </li>
             </ul>
-            <a href="fale-conosco.html" style="text-decoration: none;">
-                <button>Fale conosco</button>
-            </a>            
+            <div class="full-screen-container">
+                <a href="fale-conosco.html" style="text-decoration: none;">
+                    <button>Fale conosco</button>
+                </a>
+            </div>                
         </div>
         <div class="image-content-inferior">
             <img src="imagens/caminhao.png">
@@ -80,26 +87,74 @@
     </section>
 <script>
 
-    // inicia aq o JS do sub menu em atuação//
-    // Função para abrir e fechar o dropdown
-    document.addEventListener('DOMContentLoaded', function () {
-        const dropbtn = document.querySelector('.dropbtn');
-        const dropdownContent = document.querySelector('.dropdown-content');
+// Função para abrir e fechar o dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-        // Alterna a visibilidade do submenu ao clicar
-        dropbtn.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita comportamento de link
-            dropdownContent.classList.toggle('show'); // Alterna a classe 'show'
-        });
+    // Função para alternar visibilidade do dropdown
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show');
+    }
 
-        // Fecha o submenu ao clicar fora dele
-        window.addEventListener('click', function (event) {
-            if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
-                dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
-            }
-        });
+    // Adiciona listener para o botão de atuação
+    dropbtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Verifica se está em mobile
+        const isMobile = window.innerWidth <= 999; 
+        if (isMobile) {
+            // Redireciona para a seção "redirecionando-servicos" na página index.html
+            window.location.href = "index.html#redirecionando-servicos"; 
+        } else {
+            // Se não estiver em mobile, abre o submenu
+            toggleDropdown();
+        }
     });
-// fim JS do sub menu em atuação//
+
+    // Fecha o submenu ao clicar fora dele
+    window.addEventListener('click', function (event) {
+        if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+        }
+    });
+});
+
+// Classe para o menu responsivo
+class MobileNavbar {
+    constructor(mobileMenu, navbar, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navbar = document.querySelector(navbar);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.navbar.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".navbar",      
+    ".navbar a"
+);
+mobileNavbar.init();
+
 
 
 </script>
