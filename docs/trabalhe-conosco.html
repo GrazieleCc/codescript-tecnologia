@@ -7,17 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <title>Trabalhe Conosco</title>
+    <title>Trabalhe Conosco -  Codecript</title>
 </head>
 <body>
     <!--header inicia-->
     <header>
-        <div id="menu-bar" class="fasn fa-bars">&#9776</div> <!--tecnica do unicode-->
+        <div id="menu-bar" class="fasn fa-bars">&#9776</div>
         <a href="index.html">
             <img src="imagens/logo branca.png" alt="Logo CodeScript" class="logo">
-        </a>        
+        </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
         <nav class="navbar">
-            <a href="index2.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <div class="dropdown">
                 <a href="#Atuação" class="dropbtn">Atuação</a>
                 <div class="dropdown-content">
@@ -27,12 +32,13 @@
                     <a href="rastreio.html">Rastreamento de Frota</a>
                 </div>
             </div>
-            <a href="index2.html#slider">Projetos</a>
+            <a href="index.html#slider">Projetos</a>
             <a href="sobre nos.html">Sobre Nós</a>
             <a href="trabalhe-conosco.html">Carreira</a>
             <a href="fale-conosco.html">Contato</a>
         </nav>
     </header>
+
     
     <section class="trabalhe-conosco-section">
         <div class="trabalhe-conosco-wrapper">
@@ -51,7 +57,6 @@
                         <label for="curriculo" id="fileLabel">Procurar</label>
                         <input type="file" id="curriculo" name="curriculo">
                     </div>
-                
                     <button type="submit">Enviar</button>
                 </form>
                 
@@ -66,21 +71,82 @@
     
             <!-- Div direita: Texto e imagem -->
             <div class="info-container">
-                <h2>O que esperamos de você?</h2>
-                <ul>
-                    <li>Conhecimento Técnico;</li>
-                    <li>Espírito Colaborativo;</li>
-                    <li>Criatividade;</li>
-                    <li>Comprometimento com a Qualidade;</li>
-                    <li>Vontade de Aprender.</li>
-                </ul>
-                <p>Se você se identifica, envie seu currículo para a CodeScript. <br>Estamos ansiosos para conhecer você!</p>
-                <img src="imagens/trabalhe-conosco-imagem.png" alt="Trabalho em equipe na CodeScript">
+                <img src="imagens/trabalhe-conosco.png" alt="Trabalho em equipe na CodeScript">
             </div>
         </div>
     </section>
     
     <script>
+
+// Função para abrir e fechar o dropdown
+document.addEventListener('DOMContentLoaded', function () {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    // Função para alternar visibilidade do dropdown
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show');
+    }
+
+    // Adiciona listener para o botão de atuação
+    dropbtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Verifica se está em mobile
+        const isMobile = window.innerWidth <= 999; 
+        if (isMobile) {
+            // Redireciona para a seção "redirecionando-servicos" na página index.html
+            window.location.href = "index.html#redirecionando-servicos"; 
+        } else {
+            // Se não estiver em mobile, abre o submenu
+            toggleDropdown();
+        }
+    });
+
+    // Fecha o submenu ao clicar fora dele
+    window.addEventListener('click', function (event) {
+        if (!dropbtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder
+        }
+    });
+});
+
+// Classe para o menu responsivo
+class MobileNavbar {
+    constructor(mobileMenu, navbar, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navbar = document.querySelector(navbar);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.navbar.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".navbar",      
+    ".navbar a"
+);
+mobileNavbar.init();
+
+
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("uploadForm");
             const modal = document.getElementById("myModal");
