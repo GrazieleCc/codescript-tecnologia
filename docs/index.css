@@ -172,6 +172,11 @@ header .navbar a{
 
 }
 
+.video-conteiner video {
+    pointer-events: none;
+}
+
+
 .home .controles{
     padding: 0.5rem;
     border-radius: 0.5rem;
