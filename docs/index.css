@@ -172,6 +172,9 @@ header .navbar a{
 
 }
 
+.video-conteiner video {
+    pointer-events: none;
+}
 
 
 .home .controles{
