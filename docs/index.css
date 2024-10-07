@@ -158,14 +158,14 @@ header .navbar a{
 
 .video-conteiner .btn{
     position: absolute;
-    top: 80%;
+    top: 78%;
     left: 20px;
     transform: translateY(-50%);
     z-index: 2;
-    background: #0d1837;
+    background: #0285f4;
     color: #ededed;
     padding: .8rem 3rem;
-    border: .2rem solid #ededed; /* Corrigido */
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1.7rem;
     margin-left: 90px;
@@ -177,12 +177,12 @@ header .navbar a{
     border-radius: 0.5rem;
     background: #0d1837;
     position: relative;
-    top: 30rem;
+    top: 38rem;
 }
 
 .home .controles .video-btn{
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     display: inline-block;
     border-radius: 50%;
     background: #0285f4;
@@ -197,7 +197,7 @@ header .navbar a{
     position: absolute;
     text-align: left;
     top: 200px; /* Ajuste a posição do texto */
-    left: 20px;
+    left: 100px;
     color: #ededed;
     font-size: 8rem;
     flex-wrap: nowrap; /* Garantir que o texto fique em uma única linha */
@@ -209,7 +209,7 @@ header .navbar a{
     position: absolute;
     text-align: left;
     top: 420px; /* Ajuste a posição do texto */
-    left: 20px;
+    left: 100px;
     color: #ededed;
     font-size: 5rem;
 
@@ -983,21 +983,31 @@ input[type="radio"]:checked + label {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+    section.tecnologias {
+        padding: 0 5px; /* Ajuste o padding superior e inferior */
+    }
+
     .titulo-tecnologias {
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-top: 25px !important; /* Força o ajuste de tamanho */
     }
 
     .paragrafo-tecnologias {
         font-size: 2rem;
+        margin-bottom: 10px !important; /* Força o ajuste de tamanho */
+
     }
 
     .conteudo-icones-tecnologias {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste para telas menores */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajuste para telas menores */
         gap: 30px; /* Reduzi o espaçamento */
     }
 
     .img-icones-tecnologias {
-        width: 150px; /* Tamanho ajustado para telas menores */
+        width: 100% !important; /* Força o ajuste de tamanho */
+        max-width: 200px; /* Ajuste o valor conforme necessário */
+        height: auto; /* Mantém a proporção das imagens */
     }
 }
 
@@ -1195,35 +1205,48 @@ input[type="radio"]:checked + label {
    /* Estilos gerais para dispositivos com largura máxima de 999px (smartphones) */
 @media (max-width: 999px) { /* Smartphones */
     .overlay {
-        display: flex;
-        position: absolute;
-        text-align: left;
         top: 200px; /* Ajuste a posição do texto */
         left: 20px;
         color: #ededed;
-        font-size: 4rem; /* Tamanho da fonte para smartphones */
-        flex-wrap: nowrap; /* Garantir que o texto fique em uma única linha */
-        align-items: center; /* Alinha o texto verticalmente */
+        font-size: 7rem; /* Tamanho da fonte para smartphones */
+
     }
     
     .overlay-p {
         display: flex;
         position: absolute;
         text-align: left;
-        top: 380px; /* Ajuste a posição do texto */
+        top: 400px; /* Ajuste a posição do texto */
         left: 20px;
         color: #ededed;
-        font-size: 2rem; /* Tamanho da fonte do parágrafo para smartphones */
+        font-size: 6rem; /* Tamanho da fonte do parágrafo para smartphones */
+        
     }
     
     .overlay::before {
         content: "NÓS SOMOS";
         color: #0285f4;
         position: absolute;
-        font-size: 4rem; /* Tamanho da fonte do título para smartphones */
+        font-size: 7rem; /* Tamanho da fonte do título para smartphones */
         top: 0;
         left: 0;
     }
+
+    .video-conteiner .btn{
+        padding: 10px;
+        top: 68%;
+        left: -48px;
+        font-size: 1.5rem;
+        background: #0285f4;
+    }
+    
+    .home .controles .video-btn{
+        height: 2rem;
+        width: 2rem;
+    
+    }
+
+
 }
 
 
@@ -1232,19 +1255,36 @@ input[type="radio"]:checked + label {
 @media (max-width: 480px) { /* Smartphones pequenos */
     .overlay {
         top: 180px; /* Ajuste de posição para smartphones pequenos */
-        left: 10px; /* Redução da distância da borda */
-        font-size: 3rem; /* Tamanho da fonte para smartphones pequenos */
+        left: 40px; /* Redução da distância da borda */
+        font-size: 3.5rem; /* Tamanho da fonte para smartphones pequenos */
     }
     
     .overlay-p {
         top: 320px; /* Ajustar o parágrafo para smartphones pequenos */
-        left: 10px; /* Redução da distância da borda */
-        font-size: 2rem; /* Tamanho da fonte do parágrafo para smartphones pequenos */
+        left: 40px; /* Redução da distância da borda */
+        font-size: 2.0rem; /* Tamanho da fonte do parágrafo para smartphones pequenos */
     }
 
     .overlay::before {
-        font-size: 3rem; /* Reduzir tamanho do "NÓS SOMOS" para smartphones pequenos */
+        font-size: 3.5rem; /* Reduzir tamanho do "NÓS SOMOS" para smartphones pequenos */
     }
+
+    .video-conteiner .btn{
+        padding: 10px;
+        top: 68%;
+        left: -48px;
+        font-size: 1.5rem;
+        background: #0285f4;
+    }
+    
+    .home .controles .video-btn{
+        height: 2rem;
+        width: 2rem;
+    
+    }
+
+
+
 }
 
 /* Estilos gerais para iPhones até o iPhone 5 (largura máxima de 320px) */
@@ -1264,6 +1304,9 @@ input[type="radio"]:checked + label {
     .overlay::before {
         font-size: 3rem; /* Reduzir tamanho do "NÓS SOMOS" para iPhone 5 */
     }
+
+    
+
 }
 
 
@@ -1298,6 +1341,27 @@ input[type="radio"]:checked + label {
 
 /* Ajuste para smartphones */
 @media (max-width: 768px) {
+
+    .home .controles{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background: #0d1837;
+        position: relative;
+        top: 28rem;
+    }
+    
+    .home .controles .video-btn{
+        height: 2rem;
+        width: 2rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: #0285f4;
+        cursor: pointer;
+        margin: 0 .5rem;
+    
+    }
+
+
     .slider-section {
         padding: 0;
         width: 100vw;
@@ -1347,34 +1411,170 @@ input[type="radio"]:checked + label {
 /* Responsividade para tablets comuns, como iPad e tablets Android (largura máxima de 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    /* Ajuste das tecnologias */
+       /* Ajustes gerais para o menu em mobile */
+       .navbar {
+        display: flex;
+        position: absolute;
+        top: 6vh;
+        right: 0;
+        width: 50vw;
+        height: 94vh;
+        background: #0d1837;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+      }
+    
+      .navbar a {
+        margin-left: 0;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Sem keyframes */
+      }
+    
+      .mobile-menu {
+        display: block;
+      }
+    
+      .navbar.active {
+        transform: translateX(0);
+      }
+    
+      .navbar.active a {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    
+      .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+    
+      .mobile-menu.active .line2 {
+        opacity: 0;
+      }
+    
+      .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+    
+      .dropdown-content {
+        display: none !important;
+      }
+
+    .home .controles{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background: #0d1837;
+        position: relative;
+        top: 50rem;
+    }
+    
+    .home .controles .video-btn{
+        height: 4rem;
+        width: 4rem;
+        display: inline-block;
+        border-radius: 50%;
+        background: #0285f4;
+        cursor: pointer;
+        margin: 0 .5rem;
+    
+    }
+
+
+    .overlay {
+        top: 180px; /* Ajuste de posição para smartphones pequenos */
+        left: 40px; /* Redução da distância da borda */
+        font-size: 7rem; /* Tamanho da fonte para smartphones pequenos */
+    }
+    
+    .overlay-p {
+        top: 480px; /* Ajustar o parágrafo para smartphones pequenos */
+        left: 40px; /* Redução da distância da borda */
+        font-size: 6rem; /* Tamanho da fonte do parágrafo para smartphones pequenos */
+    }
+
+    .overlay::before {
+        font-size: 7rem; /* Reduzir tamanho do "NÓS SOMOS" para smartphones pequenos */
+    }
+
+    .video-conteiner .btn{
+        padding: 20px;
+        top: 80%;
+        left: -43px;
+        font-size: 3rem;
+    }
+    
+
+    section.tecnologias {
+        width: 100%;
+        padding: 0 5px;
+    }
+
     .titulo-tecnologias {
-        font-size: 5rem;
+        font-size: 6rem;
+        margin-top: 25px !important;
     }
 
     .paragrafo-tecnologias {
-        font-size: 2.5rem;
+        font-size: 4rem;
+        margin-bottom: 10px !important;
     }
 
     .conteudo-icones-tecnologias {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Define 2 colunas no grid */
+        gap: 30px; /* Espaçamento entre as imagens */
     }
 
     .img-icones-tecnologias {
-        width: 200px;
+        width: 100% !important; /* Ajuste para que as imagens preencham a largura da coluna */
+        max-width: 250px; /* Limita o tamanho máximo das imagens */
+        height: auto; /* Mantém a proporção das imagens */
     }
 
-    /* Cards para tablets */
+
+    .video-section {
+        padding: 40px 20px; /* Adiciona espaçamento ao redor da seção */
+    }
+
+    .video-section h1 {
+        font-size: 4rem; /* Ajusta o tamanho do título */
+        text-align: center; /* Centraliza o título */
+        margin-bottom: 30px; /* Espaçamento abaixo do título */
+    }
+
     .cards {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex; /* Usa flexbox para os cards */
+        flex-direction: row; /* Mantém os cards em linha */
+        justify-content: center; /* Centraliza os cards */
+        flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha, se necessário */
+        gap: 20px; /* Espaçamento entre os cards */
     }
 
     .card {
-        width: 45%;
-        max-width: 600px;
+        max-width: 30%; /* Cada card ocupará cerca de 30% da largura disponível */
+        box-sizing: border-box; /* Garante que padding e border não influenciem no cálculo de largura */
+        text-align: center; /* Centraliza o texto dentro do card */
     }
+
+    .card video {
+        width: 100%; /* Ajusta o tamanho do vídeo para ocupar toda a largura do card */
+        height: auto; /* Mantém a proporção do vídeo */
+        margin-bottom: 10px; /* Espaço abaixo do vídeo */
+    }
+
+    .card .title {
+        font-size: 2.5rem; /* Ajusta o tamanho do título */
+        margin-bottom: 5px; /* Espaço abaixo do título */
+    }
+
+    .card .hover-text {
+        font-size: 2rem; /* Ajusta o tamanho do texto explicativo */
+    }
+
+    
 
     /* Seção sobre nós */
     .container-sobre-nos {
@@ -1404,27 +1604,43 @@ input[type="radio"]:checked + label {
     }
 
     .servicos h1 {
+        font-size: 6rem;
+    }
+
+    .servicos h2 {
         font-size: 3rem;
     }
 
+
     /* Ajustes de slider */
+
+    section.slider-section {
+        padding: 40px 20px; /* Aumenta o espaço interno da seção */
+    }
+    
     .slider-section {
-        width: 100vw;
-        padding: 0;
+        width: 100%
+        
     }
 
     .slider {
         max-width: 100rem;
     }
 
-    .conteudo h2 {
-        font-size: 3rem;
-        text-align: left;
+    .slider-section .conteudo h2 {
+        font-size: 6rem; /* Aumenta o tamanho do h2 */
+        line-height: 1.2; /* Ajusta o espaçamento entre linhas para melhor leitura */
+        margin-bottom: 15px; /* Ajusta o espaçamento inferior */
     }
 
-    .conteudo p {
-        font-size: 2.5rem;
-        margin-left: 20px;
+    .slider-section .conteudo p {
+        font-size: 4rem; /* Aumenta o tamanho do parágrafo */
+        line-height: 1.5; /* Ajusta a altura da linha para melhor leitura */
+    }
+
+    .slide{
+        padding: 40px 20px; /* Aumenta o espaço interno da seção */
+
     }
 
     img {
@@ -1433,42 +1649,124 @@ input[type="radio"]:checked + label {
         border-radius: 1rem;
     }
 
-    /* Ajustes do footer */
+    .steps {
+        display: flex;
+        flex-direction: row; /* Mantém os itens em linha */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+        gap: 20px; /* Adiciona espaço entre os itens */
+    }
+
+    .step {
+        max-width: 65%; /* Cada item ocupa cerca de metade da largura do container */
+        box-sizing: border-box; /* Garante que padding e border não influenciem no cálculo de largura */
+    }
+
+    .metodo-trabalho img {
+        width: 100%; /* Ajusta o tamanho das imagens */
+        height: auto; /* Mantém a proporção das imagens */
+        margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    }
+
+    .metodo-trabalho h1 {
+        font-size: 6rem; /* Ajusta o tamanho do título principal */
+        margin-bottom: 30px; /* Espaçamento abaixo do título */
+        text-align: center;
+    }
+
+    .metodo-trabalho h2 {
+        font-size: 4rem; /* Ajusta o tamanho do subtítulo */
+        margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+    }
+
+    .metodo-trabalho p {
+        font-size: 3rem; /* Ajusta o tamanho do texto do parágrafo */
+        line-height: 1.5; /* Melhor espaçamento entre linhas para legibilidade */
+    }
+
+    .partners-section {
+        padding: 60px 20px; /* Aumenta o padding para afastar o conteúdo das bordas */
+        text-align: center; /* Centraliza o texto na seção */
+    }
+
+    .partners-text h2 {
+        font-size: 4.5rem; /* Aumenta o tamanho do título para tablets */
+        margin-top: -15px;
+        margin-bottom: 15px; /* Espaço abaixo do título */
+    }
+
+    .partners-text p {
+        font-size: 4rem; /* Aumenta o tamanho do parágrafo para tablets */
+        margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+        padding-top: 20px; /* Adiciona espaço acima do parágrafo */
+
+    }
+
+    .partners-logos img {
+        width: 100%; /* Ajusta o tamanho da imagem para ocupar toda a largura disponível */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: 700px; /* Define um tamanho máximo para a imagem em telas de tablets */
+        margin-bottom: -25px; /* Adiciona espaço abaixo da imagem */
+
+    }
+
+    .partners-button {
+        margin-top: 30px; /* Aumenta o espaço acima do botão */
+    }
+
+
+
     .footer-container {
-        flex-direction: row;
-        justify-content: space-around;
-        height: auto;
+        flex-direction: column; /* Empilhar os elementos verticalmente */
+        height: auto; /* Ajuste automático de altura */
+        margin-left: 0; /* Remover margem à esquerda */
+        padding: 20px; /* Adiciona padding para espaçamento */
     }
 
     .contact-info, .site-map, .qr-et {
-        width: 30%;
-        text-align: left;
-        margin-top: 0;
+        width: 100%; /* Ocupar 100% da largura no tablet */
+        text-align: center; /* Centralizar o texto e os elementos */
+        margin-top: 20px; /* Adicionar espaçamento entre as seções */
+    }
+
+    .contact-info p, .site-map a, .site-map ul, .site-map li {
+        font-size: 20px; /* Aumentar o tamanho do texto para tablets */
     }
 
     .contact img {
-        width: 200px;
-        margin-left: 0;
+        width: 200px; /* Ajuste o tamanho da imagem da logo no tablet */
+        margin-left: 0; /* Centralizar a logo no tablet */
     }
 
     .qr-et img {
-        width: 150px;
+        width: 150px; /* Tamanho aumentado do QR e ET no tablet */
+    }
+
+    .qr-et .et-image {
+        padding-right: 30px; /* Aumenta o padding à direita da imagem ET no tablet */
     }
 
     .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column; /* Organizar o footer-bottom verticalmente no tablet */
+        align-items: center; /* Centralizar conteúdo */
+        margin-top: 20px;
+    }
+
+    .social-media {
+        margin-top: 15px; /* Espaçamento adicional entre os elementos no tablet */
     }
 
     .social-media a {
-        font-size: 18px;
+        font-size: 18px; /* Tamanho do texto das redes sociais no tablet */
     }
 
     .social-icon {
-        width: 50px;
+        width: 50px; /* Tamanho maior para ícones de redes sociais */
     }
 
     .legal-info {
-        font-size: 18px;
+        font-size: 18px; /* Ajuste de tamanho para texto legal */
+        margin-top: 20px;
     }
 }
