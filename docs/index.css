@@ -719,7 +719,7 @@ input[type="radio"]:checked + label {
 }
 
     .sobre-nos-imagem {
-        width: 100%;
+        width: 50%;
 
         
     }
@@ -795,7 +795,7 @@ input[type="radio"]:checked + label {
 }
 
 .sobre-nos-imagem img {
-    width: 100%;
+    width: 150%;
     height: auto;
 }
 
