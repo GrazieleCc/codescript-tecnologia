@@ -161,24 +161,21 @@ body {
     text-align: center;
 }
 
-
-.container img {
-    margin-bottom: -50px; 
-  }
   
-  
-  .image-content-superior img {
+.image-content-superior img {
     margin-right: -50px;
     padding-top: 100px;
-    max-width: 120%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     
-  }
-  
-  .image-content-inferior img {
-    margin-left: -30px;
-    margin-top: 10rem;
+    
+    
+}
+
+.image-content-inferior img {
+    margin-left: -50px;
+    margin-top: -2rem;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
