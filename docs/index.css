@@ -718,6 +718,12 @@ input[type="radio"]:checked + label {
     text-align: left;
 }
 
+    .sobre-nos-imagem {
+        width: 100%;
+
+        
+    }
+
 .sobre-nos-texto h1 {
     font-size: 4rem;
     color: #0d1837;
